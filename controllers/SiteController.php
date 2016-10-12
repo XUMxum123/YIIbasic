@@ -122,4 +122,19 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    /**
+     * Displays hello world.
+     * # 
+     * # [author: meng.xu]
+     *   if actionSay, the url is http://localhost/basic/index.php?r=site/say
+     *   if actionSayHello, the the url is http://localhost/basic/index.php?r=site/say-hello
+     *   if want to detail, you can see study.pdf [pages 11-12]
+     * #
+     * @return string
+     */  
+    public function actionSayHello(){
+    	$message = "hello world!";
+    	return $this->render('say',['message'=>$message]);
+    }
 }
