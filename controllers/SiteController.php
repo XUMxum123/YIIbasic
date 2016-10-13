@@ -129,8 +129,8 @@ class SiteController extends Controller
      * Displays hello world.
      * # 
      * # [author: meng.xu]
-     *   if actionSay, the url is http://localhost/basic/index.php?r=site/say
-     *   if actionSayHello, the the url is http://localhost/basic/index.php?r=site/say-hello
+     *   if actionSay, the url is http://localhost/basic/web/index.php?r=site/say
+     *   if actionSayHello, the the url is http://localhost/basic/web/index.php?r=site/say-hello
      *   if want to detail, you can see study.pdf [pages 11-12]
      * #
      * @return string
