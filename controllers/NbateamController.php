@@ -25,4 +25,17 @@
  				'pagination' => $pagination,
  		]);
  	}
+ 	
+ 	public function actionQuery()
+ 	{
+ 		$tableName = "nbateam";
+ 		$query = new \yii\db\Query();
+ 		//$data = $query->from($tableName)->limit(5)->all();
+ 		//var_dump($data);
+ 		$condition = "火箭";
+ 		$data = $query->from($tableName)->where(['Name' => $condition])->all();
+ 		//var_dump(count($data));
+ 		$command = $query->from($tableName)->where(['Name' => $condition])->createCommand();
+ 		echo $command->sql;
+ 	}
  }
