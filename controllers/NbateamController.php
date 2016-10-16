@@ -28,14 +28,20 @@
  	
  	public function actionQuery()
  	{
- 		$tableName = "nbateam";
+ 		//$tableName = "nbateam";
  		$query = new \yii\db\Query();
- 		//$data = $query->from($tableName)->limit(5)->all();
+ 		$data = $query->from(DB_NBATEAM_TAB)->limit(5)->all();
+ 		$commonId = uuid();
+ 		return $this->render('query', [
+ 				'data' => $data,
+ 				'commonId' => $commonId,
+ 		]);
+ 		
  		//var_dump($data);
- 		$condition = "火箭";
- 		$data = $query->from($tableName)->where(['Name' => $condition])->all();
+ 		//$condition = "火箭";
+ 		//$data = $query->from($tableName)->where(['Name' => $condition])->all();
  		//var_dump(count($data));
- 		$command = $query->from($tableName)->where(['Name' => $condition])->createCommand();
- 		echo $command->sql;
+ 		//$command = $query->from($tableName)->where(['Name' => $condition])->createCommand();
+ 		//echo $command->sql;
  	}
  }
