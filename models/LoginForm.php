@@ -32,6 +32,8 @@ class LoginForm extends Model
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
+        		
+        	['username', 'validateUsername'], // add by xum
         ];
     }
 
@@ -52,7 +54,23 @@ class LoginForm extends Model
             }
         }
     }
-
+    
+    /**
+     * Validates the username.
+     * This method serves as the inline validation for username.
+     *
+     * @author meng.xu
+     * @time 19-10-2016
+     * @param string $attribute the attribute currently being validated
+     * @param array $params the additional name-value pairs given in the rule
+     */
+    public function validateUsername($attribute,$params)
+    {
+    	if (!in_array($this->$attribute, ['xum', 'tpv'])) {
+    		$this->addError($attribute, 'The username must be either "xum" or "tpv".');
+    	}
+    }
+    
     /**
      * Logs in a user using the provided username and password.
      * @return boolean whether the user is logged in successfully
