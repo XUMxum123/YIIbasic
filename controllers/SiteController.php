@@ -9,7 +9,9 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
+use yii\web\UploadedFile;
 use app\models\EntryForm; // add xum
+use app\models\UploadForm; // add xum
 
 class SiteController extends Controller
 {
@@ -152,5 +154,28 @@ class SiteController extends Controller
     	}else{
     		return $this->render("entry",["model"=>$model]);
     	}
+    }
+    
+    /**
+     * Upload image.
+     * Just to test it --- [meng.xu]
+     * @return string
+     */
+    public function actionUpload()
+    {
+    	$model = new UploadForm();
+    	/*
+    	 * note: [need to auto create file] solving?
+    	 * @param $subfileName must be create at uploads before save file
+    	 * */
+    	$subfileName = "site";
+    	if (Yii::$app->request->isPost) {
+    		$model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+    		if ($model->upload($subfileName)) {
+    			// 文件上传成功
+    			return $this->render('upload', ['model' => $model]);
+    		}
+    	}
+    	return $this->render('upload', ['model' => $model]);
     }
 }
