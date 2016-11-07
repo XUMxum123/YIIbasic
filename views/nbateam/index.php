@@ -12,9 +12,9 @@ use yii\widgets\LinkPager;
    </tr>
   <?php foreach ($data as $dat): ?>
    <tr>
-     <td><?= Html::encode("{$dat->Id}")?></td>
-     <td><?= Html::encode("{$dat->Name}")?></td>
-     <td><?= Html::encode("{$dat->Win}")?></td>
+     <td><?= Html::encode("{$dat[DB_NBATEAM_ID]}")?></td>
+     <td><?= Html::encode("{$dat[DB_NBATEAM_NAME]}")?></td>
+     <td><?= Html::encode("{$dat[DB_NBATEAM_WIN]}")?></td>
    </tr>
   <?php endforeach; ?>
 </table>

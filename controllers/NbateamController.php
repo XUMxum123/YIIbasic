@@ -10,20 +10,33 @@
  {
  	public function actionIndex()
  	{
- 		$query = Nbateam::find();
+ 		//$query = Nbateam::find();
+ 		$nbaTeam = new Nbateam();
  		$pagination = new Pagination([
  			'defaultPageSize' => 5,
- 			'totalCount' => $query->count(),
+ 			'totalCount' => $nbaTeam->_get_row_count(),
  		]);
- 		$data = $query->orderBy('Id')
+ 		
+ 		$data = $nbaTeam->_get_team_info_by_pagination($pagination->offset,$pagination->limit);
+/*  		$data = $query->orderBy('Id')
  		              ->offset($pagination->offset)
  		              ->limit($pagination->limit)
- 		              ->all();
+ 		              ->all(); */
  		//var_dump($data);
  		return $this->render('index', [
  				'data' => $data,
  				'pagination' => $pagination,
  		]);
+ 	}
+ 	
+ 	public function actionTest()
+ 	{
+ 		return $this->render('test');
+ 	}
+ 	
+ 	public function actionPagination()
+ 	{
+ 		return $this->render('pagination');
  	}
  	
  	public function actionQuery()

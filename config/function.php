@@ -17,6 +17,21 @@ define("DB_NBATEAM_ALLIANCE", "Alliance");
 define("DB_NBATEAM_PLAYOFFS", "Playoffs");
 define("DB_NBATEAM_PARTITION", "Partition");
 
+/*    news table, add by xum
+ */
+define("DB_NEWS_TAB", "news");
+define("DB_NEWS_ID", "id");
+define("DB_NEWS_TITLE", "title");
+define("DB_NEWS_CONTENT", "content");
+
+
+
+
+
+/***********************************************/
+/*               function define                */
+/***********************************************/
+
 /** Generates an UUID
  * @param string  an optional prefix
  * @return string  the formatted uuid
