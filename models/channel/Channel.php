@@ -1,17 +1,19 @@
 <?php
-namespace app\models;
+namespace app\models\channel; /* important */
 
 use yii\db\ActiveRecord;
 
 class Channel extends ActiveRecord
 {
 	protected $query;
+	//protected $queryOne;
 		
 	public function __construct()
 	{
 		$this->query = Channel::find();
+		//$this->queryOne = Channel::findOne();
 	}
-	
+		
 	/**
 	 * tableName
 	 * @return string [the real of tableName]
@@ -20,6 +22,25 @@ class Channel extends ActiveRecord
 	{
 		$tableName = DB_CHANNEL_TAB;
 		return $tableName;
+	}
+	
+	public function _save_record(array $data=null)
+	{
+/* 	   $affectRow = 0;
+	   if($data == null){
+	   	 return $affectRow;
+	   }else{
+	   	 
+	   } */
+	   
+/* 	   $where = [DB_CHANNEL_ID => $channelId];
+	   $record = Channel::findOne($where);
+	   if($record != null){ // save
+	   	 $dat = '123';
+	   }else{ // update
+	   	 $dat = '456';
+	   }
+	   return $dat; */
 	}
 	
 	/**
@@ -31,6 +52,8 @@ class Channel extends ActiveRecord
 		$count = $this->query->count();
 		return $count;
 	}
+	
+	//public function 
 	
 	/**
 	 * _get_team_info_by_pagination
