@@ -24,6 +24,14 @@ define("DB_NEWS_ID", "id");
 define("DB_NEWS_TITLE", "title");
 define("DB_NEWS_CONTENT", "content");
 
+/*    channel table, add by xum
+ */
+define("DB_CHANNEL_TAB", "channel");
+define("DB_CHANNEL_ID", "channelId");
+define("DB_CHANNEL_NAME", "channelName");
+define("DB_CHANNEL_CONTENT", "channelContent");
+define("DB_CHANNEL_NUMBER", "channelNumber");
+
 
 
 
