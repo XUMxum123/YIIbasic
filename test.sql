@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016-10-13 13:36:11
+-- Generation Time: 2016-11-08 09:12:02
 -- 服务器版本： 5.7.11
 -- PHP Version: 5.6.19
 
@@ -19,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `test`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `channel`
+--
+
+CREATE TABLE `channel` (
+  `channelId` char(32) CHARACTER SET utf8 NOT NULL,
+  `channelName` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `channelContent` varchar(1000) CHARACTER SET utf8 NOT NULL,
+  `channelNumber` char(32) CHARACTER SET utf8 NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -62,7 +75,7 @@ INSERT INTO `nbateam` (`Id`, `Name`, `Logo`, `Win`, `Lose`, `Rank`, `Alliance`, 
 ('a5d6c0e5943b6c409f038e73d3df595e', '热火', 'http://www.xum.com/nbateam/热火.png', 48, 34, 3, 'East', 'Yes', '东南赛区'),
 ('a7474523e11a1ee64c0c808048e61bfd', '掘金', 'http://www.xum.com/nbateam/掘金.png', 33, 49, 11, 'West', 'No', '西北分区'),
 ('a771dd1003f325fa80dbac21f518e438', '猛龙', 'http://www.xum.com/nbateam/猛龙.png', 56, 26, 2, 'East', 'Yes', '大西洋分区'),
-('acf31c6d43451da2a753bf550d4e125e', '76人', 'http://www.xum.com/nbateam/76人.png', 10, 72, 15, 'East', 'No', '大西洋分区'),
+('acf31c6d43451da2a753bf550d4e125e', '76人', 'http://www.xum.com/nbateam/人.png', 10, 72, 15, 'East', 'No', '大西洋分区'),
 ('b20621f8a81b35d33701ab634709481a', '雄鹿', 'http://www.xum.com/nbateam/雄鹿.png', 33, 49, 12, 'East', 'No', '中央分区'),
 ('b795a48212464260fd94138174d749a0', '森林狼', 'http://www.xum.com/nbateam/森林狼.png', 29, 53, 13, 'West', 'No', '西北分区'),
 ('c784472058f3f0b8c0ffc9385fc247fe', '魔术', 'http://www.xum.com/nbateam/魔术.png', 35, 47, 11, 'East', 'No', '东南赛区'),
@@ -91,13 +104,22 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `content`) VALUES
-('caf53fadaac619674cf4f847fc619864', 'kkkkkk', 'kkkkkkk'),
-('2d31d03817a963052eb0fd0dfc8ed54b', 'oo', 'kkkkkkkkkkk'),
-('f0fac72a9b396e27006c074d81bcdb3a', '2xabc', '22xxabc'),
-('03673a771e7da3ea51b1fafa46253ca3', '123', '456789'),
-('ca606aa6b2be0f32857f7d321c703790', '1', '11'),
-('f1ef0cf3c2d8bc715df46f6c3cbf68cd', 'mytitlexum', 'mycontentxum'),
-('3a93845c4e6ccafdb37d22eefd5fafe7', '66', '6666');
+('038220609473720dfcdad43960193404', 'hhhhhhh', 'hhhhhhhhhh'),
+('fcf2c8d917786b31eb991b4f14ebf690', 'ccccc', 'cccccccccc'),
+('d93dc838d59f34f87d63bd0b1692ec20', 'ddddd', 'dddddddddd'),
+('e9ebfc3c37a2c4844714c00a669d6b92', 'nnnnnn', 'nnnnnnnnnnnnnnnn'),
+('d1810a68ea11fd00303ce3b711c2755f', 'kjhgfdd', 'hgfdsatrewq'),
+('2134c2b95af8194cf3f08565c92bd25b', 'title', 'content'),
+('9af98fc35ad285afc983665c2d3d1f0a', '11', '234'),
+('fbdf3e2de1e48deced507f668650ac2b', 'my title', 'my News'),
+('64c71c891852c58606307a38c00ffda4', 'ccccccc', 'vvvvvvvvvvv'),
+('4b08266eac189cf7b49df0123d0de890', 'r', 'rr'),
+('a029aeb35946351819668f29c38fe527', 'mm', 'mmm'),
+('a3219a7a7c706d2ba83be7b0634815df', 'mm', 'mmm'),
+('f7672f918f8183c3374692f1fd67ea53', 'm', 'mm'),
+('e67cffa2deb719e34cf2b1e0b81d6230', '11', '1111'),
+('6cf0fef480df1332f5e82644a474ec2b', '22', '2222'),
+('8a444a458dcb018afa319e4e96fab209', '33xx', '3333xx');
 
 -- --------------------------------------------------------
 
@@ -119,17 +141,26 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `newsid`, `nbateamid`, `name`, `sex`, `country`) VALUES
-('26537dc3077ee4fd47e67e39b5b5ba3d', 'caf53fadaac619674cf4f847fc619864', '14198c44a4c0ae65cb23a544615d9418', 'kkkkk', 'girl', 'China'),
-('f1debf5b8d76c046dd4f632747f22a31', '2d31d03817a963052eb0fd0dfc8ed54b', '963fcdce80501dd1be79dee4d83d23b7', 'cvy', 'girl', 'China'),
-('f38f814b4d3a496d3fd9a76ca626f570', 'f0fac72a9b396e27006c074d81bcdb3a', '03f41eb5656c333a3207d1162a6f216a', '222', 'girl', 'America'),
-('13c856a5a89791d66e8e1cfceb310ed0', '03673a771e7da3ea51b1fafa46253ca3', 'a5d6c0e5943b6c409f038e73d3df595e', 'nnn', 'boy', 'China'),
-('6788baa1d641aade66d6c8f18e773d54', 'ca606aa6b2be0f32857f7d321c703790', '1105d832ff07b9fa3c3c07029dc7e5dd', '111', 'boy', 'China'),
-('c328a6610c6fc2719a4d5b3523e743f0', 'f1ef0cf3c2d8bc715df46f6c3cbf68cd', '1f9622d54781f79da17bbd9ab829bbf0', 'xumxum123', 'boy', 'German'),
-('0978c391b441a7f20884c120e7a7b135', '3a93845c4e6ccafdb37d22eefd5fafe7', 'a771dd1003f325fa80dbac21f518e438', '666666', 'boy', 'America');
+('0f1068eafbeb1e13138c2f778937bc4c', 'e9ebfc3c37a2c4844714c00a669d6b92', '14198c44a4c0ae65cb23a544615d9418', 'num', 'girl', 'China'),
+('251035babfb572a3b37647fd84db01ec', '2134c2b95af8194cf3f08565c92bd25b', '39c8525ef9950e3d31311ead05b2196a', 'name', 'girl', 'China'),
+('4b2ff4eff035278d813bd5ac33e07908', '9af98fc35ad285afc983665c2d3d1f0a', '5ece5d1703dd23e46b9ba1a1a6fb7edf', '55', 'girl', 'China'),
+('3625eb48e4ee264c652e3a751b9f6f1c', 'fbdf3e2de1e48deced507f668650ac2b', '39c8525ef9950e3d31311ead05b2196a', 'xum', 'girl', 'China'),
+('03bcf8bc5ed01b66cb735f4f751bf99b', '64c71c891852c58606307a38c00ffda4', '15fa659be1665f686f2392e01df2cb5d', 'nuopl', 'boy', 'France'),
+('1edfe8b246b2ab0270e9c29a7e237cd6', '4b08266eac189cf7b49df0123d0de890', 'a3d282dd57a637d2b292e08fde3b8cea', 'rrr', 'boy', 'German'),
+('30b72e7f0a264fdd08c1396a8f996403', 'f7672f918f8183c3374692f1fd67ea53', '5ece5d1703dd23e46b9ba1a1a6fb7edf', 'mmm', 'girl', 'France'),
+('350611de5dad5c3be0f48e8a7fb79056', 'e67cffa2deb719e34cf2b1e0b81d6230', '2a16e44488057252586bee891dd60a6c', '111111', 'boy', 'France'),
+('23f94f406e881a7120ebcb32e46e0026', '6cf0fef480df1332f5e82644a474ec2b', '963fcdce80501dd1be79dee4d83d23b7', '222222', 'girl', 'France'),
+('20059d6db9c29508b57006756e64b145', '8a444a458dcb018afa319e4e96fab209', '438aa85c262d5ed16aeebf55a3b49574', '333333', 'girl', 'German');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `channel`
+--
+ALTER TABLE `channel`
+  ADD PRIMARY KEY (`channelId`);
 
 --
 -- Indexes for table `nbateam`
