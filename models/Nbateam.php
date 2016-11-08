@@ -36,7 +36,7 @@ class Nbateam extends ActiveRecord
 	 * _get_team_info_by_pagination
 	 * @param int $offset
 	 * @param int $limit
-     * @return array
+     * @return array $data
 	 * */
 	public function _get_team_info_by_pagination($offset,$limit)
 	{   
