@@ -14,4 +14,5 @@ use yii\widgets\LinkPager;
   // $secretKey is obtained from user input, $encryptedData is from the database
   // $data = Yii::$app->getSecurity()->decryptByPassword($encryptedData, $secretKey);
   ?>
+
 </div>

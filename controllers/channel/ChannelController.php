@@ -18,7 +18,7 @@ class ChannelController extends Controller
    	  //不管是save、update、delete、insert, 成功返回1，时报返回0，
    	  $affectRow = 0;
    	  /*  save the data */
-      $channel = new Channel(); // save
+/*       $channel = new Channel(); // save
       $channel[DB_CHANNEL_ID] = uuid();
    	  $channel[DB_CHANNEL_NAME] = "厦门电视";
    	  $channel[DB_CHANNEL_CONTENT] = "这是一个非常好的电视节目,大家可以好好看看!";
@@ -28,7 +28,7 @@ class ChannelController extends Controller
    	    echo "success"; // 可重定向到另一个url
    	  }else{
    	    echo "fail";
-   	  }
+   	  } */
    	  //$channel->save(); // 等同于 $customer->insert()
    	
    	  /* note: 都用save方法保存或者更新数据,根据当前实例化对象的不同来决定 */
@@ -52,6 +52,6 @@ class ChannelController extends Controller
    	  var_dump($data); */
    	  
    	  
-   	  //return $this->render('index');
+   	  return $this->render('index');
    }
 }

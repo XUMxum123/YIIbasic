@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\URL;
 use yii\widgets\LinkPager;
 ?>
 
@@ -13,5 +14,15 @@ use yii\widgets\LinkPager;
   
   // $secretKey is obtained from user input, $encryptedData is from the database
   // $data = Yii::$app->getSecurity()->decryptByPassword($encryptedData, $secretKey);
+  ?>
+  <?php 
+    echo "relativeHomeUrl = " .Url::home() ."<br />";
+    echo "absoluteHomeUrl = " .Url::home(true) ."<br />";
+    echo "httpsAbsoluteHomeUrl = " .Url::home('https') ."<br />";
+  ?>
+    <?php 
+    echo "relativeBaseUrl = " .Url::base() ."<br />";
+    echo "absoluteBaseUrl = " .Url::base(true) ."<br />";
+    echo "httpsAbsoluteBaseUrl = " .Url::base('https') ."<br />";
   ?>
 </div>
