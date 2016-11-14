@@ -57,4 +57,14 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+		
+  'yiisoft/yii2-jui' =>    /* add by xum [yii-jui plugin] */
+  array (
+	'name' => 'yiisoft/yii2-jui',
+	'alias' =>
+	array (
+		'@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
+		),
+	),
+		
 );
