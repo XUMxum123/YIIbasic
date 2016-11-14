@@ -25,4 +25,5 @@ use yii\widgets\LinkPager;
     echo "absoluteBaseUrl = " .Url::base(true) ."<br />";
     echo "httpsAbsoluteBaseUrl = " .Url::base('https') ."<br />";
   ?>
+  <?= Html::a('点我跳转', ['channel/channel/receive', 'id' => $arr['id'],'value' => $arr['value']], ['class' => 'ahtml']) ?>
 </div>

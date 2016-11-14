@@ -1,6 +1,7 @@
 <?php
 namespace app\controllers\channel; /* important */
 
+use Yii;
 use yii\web\Controller;
 use app\models\channel\Channel;
 
@@ -14,9 +15,22 @@ class ChannelController extends Controller
    // 下面是yii助手类(helpers)的学习
    public function actionHelp()
    {
-   	  return $this->render('help');
+   	  $arr["id"] = "13579";
+   	  $arr["value"] = "yii-basic";
+   	  return $this->render('help',["arr" => $arr]);
    }
 	
+   public function actionReceive()
+   {
+   	  $request = Yii::$app->request;
+   	  $get_arr = $request->get();
+   	  
+/*    	  $id = $request->get('id','default value');
+   	  $value = $request->get('value','default value'); */
+   	  
+   	  return $this->render('receive',["get_arr" => $get_arr]);
+   }
+   
    // 下面的方法是数据库的 c u r d 学习
    public function actionIndex()
    {
