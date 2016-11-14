@@ -6,6 +6,11 @@ use app\models\channel\Channel;
 
 class ChannelController extends Controller
 {
+   public function actionWidget()
+   {
+   	 return $this->render('widget');
+   }
+	
    // 下面是yii助手类(helpers)的学习
    public function actionHelp()
    {
