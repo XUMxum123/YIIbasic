@@ -26,7 +26,23 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+        	
+        	/* add by xum  start  */
+        	'transport' => [
+        			'class' => 'Swift_SmtpTransport',
+        			'host' => 'smtp.163.com',  
+        			'username' => '18850337241@163.com',     
+        			'password' => 'xu1332080218',    
+        			'port' => '25',   
+        			'encryption' => 'tls',      				 
+        	],
+        	'messageConfig'=>[
+        			'charset'=>'UTF-8',  
+        			'from'=>['18850337241@163.com'=>'admin'], 
+        	],
+           /* add by xum  end  */
+        		
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

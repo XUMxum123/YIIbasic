@@ -3,10 +3,35 @@ namespace app\controllers\channel; /* important */
 
 use Yii;
 use yii\web\Controller;
+use yii\swiftmailer\Message;
 use app\models\channel\Channel;
 
 class ChannelController extends Controller
 {
+   // 下面是发送(mail)邮件的学习
+   public function actionMail()
+   {
+   	$mail= Yii::$app->mailer->compose();   //定义一个发送对象
+   	//$mail->useFileTransport = false;
+   	$mail->setTo('xum1281517532@163.com'); //接收人邮箱
+   	$mail->setSubject("邮件测试"); //标题
+   	$mail->setTextBody('zheshisha '); //内容
+   	$html = '';
+   	$html.= '<table border="1">';
+   	$html.= '<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>';
+   	$html.= '<tr><td>asd</td><td>dssad</td><td>asddsa</td><td>asdasda</td></tr>';
+   	$html.='</table>';
+   	$mail->setHtmlBody($html);  //发送的html内容
+   	//根据返回值判断
+   	//var_dump($mail->send());
+   	if($mail->send())
+   		echo "发送成功";
+   	else
+   		echo "发送失败";
+   	//die();
+   }
+	
+   // 下面是widget的学习
    public function actionWidget()
    {
    	 return $this->render('widget');
