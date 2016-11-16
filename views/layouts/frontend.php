@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title>TPV后台管理系统</title>
+    <title>用户登录-学工系统</title>
     <?=Html::jsFile('@web/frontend/js/jquery-1.11.3.js')?>
     <?=Html::jsFile('@web/frontend/js/frontend.js')?>
     <?=Html::cssFile('@web/frontend/css/xgxt_login.css')?>
