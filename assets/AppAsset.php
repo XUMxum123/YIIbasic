@@ -19,10 +19,10 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-    	'css/nbateam.css', // add by xum
-    	'css/channel.css',
+    	//'css/nbateam.css', // add by xum --- global css config
+    	//'css/channel.css',
     ];
-    public $js = [
+    public $js = [  // add by xum --- global js config
     ];
     public $depends = [
         'yii\web\YiiAsset',
@@ -32,11 +32,11 @@ class AppAsset extends AssetBundle
 /*     //追加这里2个函数
     //定义按需加载JS方法  ，注意加载顺序在最后
     public static function addScript($view, $jsfile) {
-    	$view->registerJsFile($jsfile, [AppAsset::className(), 'depends' => 'backend\assets\AppAsset']);
+    	$view->registerJsFile($jsfile, [AppAsset::className(), 'depends' => 'assets\AppAsset']);
     }
     //定义按需加载css方法，注意加载顺序在最后
     public static function addCss($view, $cssfile) {
-    	$view->registerCssFile($cssfile, [AppAsset::className(), 'depends' => 'backend\assets\AppAsset']);
+    	$view->registerCssFile($cssfile, [AppAsset::className(), 'depends' => 'assets\AppAsset']);
     } */
     
 }
