@@ -8,27 +8,43 @@ use app\models\channel\Channel;
 
 class ChannelController extends Controller
 {
+   // 下面是redis的学习
+   public function actionRedis()
+   {
+   	/*  目前是本地主机当作redis数据库存储,localhost(127.0.0.1)
+   	 * 1. 打开一个cmd窗口,使用cd命令切换目录到安装redis目录,如E:/redis,运行 redis-server.exe redis.conf 
+   	 * 2. 这时候另启一个cmd窗口,原来的不要关闭,不然就无法访问服务端了,再切换到redis目录下运行 redis-cli.exe -h 127.0.0.1 -p 6379 
+   	 * */
+   	 header("Content-type: text/html; charset=utf-8");
+   	 Yii::$app->redis->set('user1','aaa');
+   	 Yii::$app->redis->set('user2','bbb');
+   	 Yii::$app->redis->set('user3','ccc');
+   	 Yii::$app->redis->set('user4','ddd');
+   	 $user1 = Yii::$app->redis->get('user1');//此时可以输出aaa
+   	 var_dump($user1);
+   }
+	
    // 下面是发送(mail)邮件的学习
    public function actionMail()
    {
-   	$mail= Yii::$app->mailer->compose();   //定义一个发送对象
-   	//$mail->useFileTransport = false;
-   	$mail->setTo('xum1281517532@163.com'); //接收人邮箱
-   	$mail->setSubject("邮件测试"); //标题
-   	$mail->setTextBody('zheshisha '); //内容
-   	$html = '';
-   	$html.= '<table border="1">';
-   	$html.= '<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>';
-   	$html.= '<tr><td>asd</td><td>dssad</td><td>asddsa</td><td>asdasda</td></tr>';
-   	$html.='</table>';
-   	$mail->setHtmlBody($html);  //发送的html内容
-   	//根据返回值判断
-   	//var_dump($mail->send());
-   	if($mail->send())
+   	 $mail= Yii::$app->mailer->compose();   //定义一个发送对象
+   	 //$mail->useFileTransport = false;
+   	 $mail->setTo('xum1281517532@163.com'); //接收人邮箱
+   	 $mail->setSubject("邮件测试"); //标题
+   	 $mail->setTextBody('zheshisha '); //内容
+   	 $html = '';
+   	 $html.= '<table border="1">';
+   	 $html.= '<tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>';
+   	 $html.= '<tr><td>asd</td><td>dssad</td><td>asddsa</td><td>asdasda</td></tr>';
+   	 $html.='</table>';
+   	 $mail->setHtmlBody($html);  //发送的html内容
+   	 //根据返回值判断
+   	 //var_dump($mail->send());
+   	 if($mail->send())
    		echo "发送成功";
-   	else
+   	 else
    		echo "发送失败";
-   	//die();
+   	 //die();
    }
 	
    // 下面是widget的学习

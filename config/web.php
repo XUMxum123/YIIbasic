@@ -14,6 +14,22 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+    		
+    	/*  add by xum --- start --- [add redis plugin]  */	
+    	'redis' => [
+    		'class' => 'yii\redis\Connection',
+    		'hostname' => 'localhost', // server address
+    		'port' => 6379,  // server port
+    		'database' => 0,
+    	],
+    	'cache' => [
+    		'class' => 'yii\redis\Cache',
+    	],
+    	'session' => [
+    		'class' => 'yii\redis\Session',
+    	],
+    	/*  add by xum --- end --- [add redis plugin]  */
+    		
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
@@ -28,12 +44,12 @@ $config = [
             // for the mailer to send real emails.
             'useFileTransport' => false,
         	
-        	/* add by xum  start  */
+        	/*  add by xum --- start --- */
         	'transport' => [
         			'class' => 'Swift_SmtpTransport',
         			'host' => 'smtp.163.com',  
         			'username' => '18850337241@163.com',     
-        			'password' => 'xu1332080218',    
+        			'password' => 'xu1332080218',    // Authorization Codes
         			'port' => '25',   
         			'encryption' => 'tls',      				 
         	],
@@ -41,7 +57,7 @@ $config = [
         			'charset'=>'UTF-8',  
         			'from'=>['18850337241@163.com'=>'admin'], 
         	],
-           /* add by xum  end  */
+           /*  add by xum --- end --- */
         		
         ],
         'log' => [
