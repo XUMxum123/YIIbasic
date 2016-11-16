@@ -1,6 +1,10 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
+
+Yii::$app->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/datechooser.js");
+Yii::$app->clientScript->registerCssFile(Yii::app()->baseUrl . "/css/datechooser.css");
+
 ?>
 
 <div>
