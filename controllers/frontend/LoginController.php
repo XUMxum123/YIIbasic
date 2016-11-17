@@ -8,7 +8,6 @@ class LoginController extends Controller
 {
 	//public $layout = false; //不使用布局  //二种方式的调用
 	public $layout = "frontend"; //设置使用的布局文件
-	//public
     
     public function actionLogin()
     { 

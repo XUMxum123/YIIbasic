@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [  // add by xum --- global js config
     ];
+    //public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',

@@ -57,9 +57,21 @@ $config = [
         			'charset'=>'UTF-8',  
         			'from'=>['18850337241@163.com'=>'admin'], 
         	],
-           /*  add by xum --- end --- */
-        		
+           /*  add by xum --- end --- */       		
         ],
+    		
+    	/*  add by xum --- start --- */
+/*     	'assetManager'=>[
+    		'bundles'=>[
+    			'yii\web\JqueryAsset'=>[
+    				'jsOptions'=>[
+    					'position'=>\yii\web\View::POS_HEAD,
+    				]
+    			]
+    		]
+    	], */
+    	/*  add by xum --- end --- */
+    		
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

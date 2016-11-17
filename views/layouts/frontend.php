@@ -1,17 +1,22 @@
 <?php
   use yii\helpers\Html;
+  use app\assets\FrontendAppAsset;
+  FrontendAppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title>TPV后台管理系统</title>
+    <?php $this->head() ?>
+    <!-- 已经注释了(颜色没有变浅),在解析html时,注释的,可以通过firebug查看
     <?=Html::jsFile('@web/frontend/js/jquery-1.11.3.js')?>
     <?=Html::jsFile('@web/frontend/js/frontend.js')?>
     <?=Html::cssFile('@web/frontend/css/xgxt_login.css')?>
+    -->
 </head>
 <body>
 
