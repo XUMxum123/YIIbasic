@@ -90,7 +90,7 @@ $config = [
     					//'class'=>'CFileLogRoute',
     					'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
     					'levels'=>'error, warning',
-    					'ipFilters'=>array('127.0.0.1','192.168.1.*'), //配置可以查看debug面板的ip
+    					'ipFilters'=>array('127.0.0.1','192.168.1.*'), //閰嶇疆鍙互鏌ョ湅debug闈㈡澘鐨刬p
     				]
     		 ],
     	 ], */
