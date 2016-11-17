@@ -78,6 +78,16 @@ return array (
 	  ),
     ),
 		
+  'yiisoft/yii2-apidoc' =>    /* add by xum [yii2-apidoc plugin] */
+  array (
+	'name' => 'yiisoft/yii2-apidoc',
+	'version' => '2.0.0.0',
+	'alias' =>
+		array (
+		'@yii/apidoc' => $vendorDir . '/yiisoft/yii2-apidoc',
+		),
+	),
+		
 /*    'yiisoft/yii-debug-toolbar' =>    /* add by xum [yii-debug-toolbar plugin] */
   /*array (
 	'name' => 'yiisoft/yii2-redis',
