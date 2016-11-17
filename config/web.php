@@ -81,6 +81,21 @@ $config = [
                 ],
             ],
         ],
+    		
+    	/*  add by xum --- start --- */
+/*     	'log' => [
+    		'class'=>'CLogRouter',
+    		'routes'=>[
+    				[
+    					//'class'=>'CFileLogRoute',
+    					'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+    					'levels'=>'error, warning',
+    					'ipFilters'=>array('127.0.0.1','192.168.1.*'), //配置可以查看debug面板的ip
+    				]
+    		 ],
+    	 ], */
+    	/*  add by xum --- end --- */
+    		    		
         'db' => require(__DIR__ . '/db.php'),
         /*
         'urlManager' => [
@@ -99,6 +114,9 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
+/*     	'panels' => [
+    		'views' => ['class' => 'app\panels\ViewsPanel'],
+    	], */
     ];
 
     $config['bootstrap'][] = 'gii';

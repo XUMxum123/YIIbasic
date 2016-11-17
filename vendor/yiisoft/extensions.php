@@ -77,5 +77,15 @@ return array (
 		 '@yii/redis' => $vendorDir . '/yiisoft/yii2-redis',
 	  ),
     ),
+		
+/*    'yiisoft/yii-debug-toolbar' =>    /* add by xum [yii-debug-toolbar plugin] */
+  /*array (
+	'name' => 'yiisoft/yii2-redis',
+	'version' => '1.7.0.0',
+	'alias' =>
+	array (
+		 '@yii/debugtoobar' => $vendorDir . '/yiisoft/yii-debug-toolbar',
+	  ),
+	), */
 	
 );
