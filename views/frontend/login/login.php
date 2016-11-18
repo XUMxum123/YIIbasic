@@ -13,10 +13,10 @@
 		</div>
 		<div class="con_panel">
 			<div class="con_input">
-				<span>用户名：</span><input type="text" placeholder="用户名"/>
+				<span>用户名：</span><input type="text" class="username" placeholder="用户名" value="" />
 			</div>
 			<div class="con_input">
-				<span>密&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="text" placeholder="密码"/>
+				<span>密&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="text" class="password" placeholder="密码" value="" />
 			</div>
 			<div class="con_select">
 				<input type="radio" name="t1" value="开发者" />开发者

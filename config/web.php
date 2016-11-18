@@ -61,7 +61,6 @@ $config = [
         ],
     		
     	/*  add by xum --- start --- */
-		
 /*     	'assetManager'=>[
     		'bundles'=>[
     			'yii\web\JqueryAsset'=>[

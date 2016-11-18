@@ -1,5 +1,6 @@
 <?php
   use yii\helpers\Html;
+  use yii\helpers\Url;
   use app\assets\FrontendAppAsset;
   FrontendAppAsset::register($this);
 ?>
@@ -17,6 +18,9 @@
     <?=Html::jsFile('@web/frontend/js/frontend.js')?>
     <?=Html::cssFile('@web/frontend/css/xgxt_login.css')?>
     -->
+    <script type="text/javascript">
+        var $newIndex = "<?=Url::to(['/news/index']) ?>";
+    </script>
 </head>
 <body>
 
