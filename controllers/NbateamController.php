@@ -8,6 +8,7 @@
  
  class NbateamController extends Controller
  {
+ 	public $layout  = 'null';
  	public function actionIndex()
  	{
  		//$query = Nbateam::find();
