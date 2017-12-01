@@ -15,6 +15,13 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
     		
+        'wechat' => [
+            'class' => 'maxwen\yii2-easy-wechat',
+            // 'userOptions' => []  # user identity class params
+            // 'sessionParam' => '' # wechat user info will be stored in session under this key
+            // 'returnUrlParam' => '' # returnUrl param stored in session
+        ],
+        
     	/*  add by xum --- start --- [add redis plugin]  */	
     	'redis' => [
     		'class' => 'yii\redis\Connection',

@@ -3,42 +3,6 @@
 $vendorDir = dirname(__DIR__);
 
 return array (
-  'yiisoft/yii2-swiftmailer' => 
-  array (
-    'name' => 'yiisoft/yii2-swiftmailer',
-    'version' => '2.0.5.0',
-    'alias' => 
-    array (
-      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
-    ),
-  ),
-  'yiisoft/yii2-codeception' => 
-  array (
-    'name' => 'yiisoft/yii2-codeception',
-    'version' => '2.0.5.0',
-    'alias' => 
-    array (
-      '@yii/codeception' => $vendorDir . '/yiisoft/yii2-codeception',
-    ),
-  ),
-  'yiisoft/yii2-bootstrap' => 
-  array (
-    'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '2.0.6.0',
-    'alias' => 
-    array (
-      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
-    ),
-  ),
-  'yiisoft/yii2-debug' => 
-  array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '2.0.6.0',
-    'alias' => 
-    array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
-    ),
-  ),
   'yiisoft/yii2-gii' => 
   array (
     'name' => 'yiisoft/yii2-gii',
@@ -57,45 +21,58 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
-		
-  'yiisoft/yii2-jui' =>    /* add by xum [yii-jui plugin] */
+  'yiisoft/yii2-jui' => 
   array (
-	'name' => 'yiisoft/yii2-jui',
-  	'version' => '2.0.0.0',
-	'alias' =>
-	array (
-		'@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
-	 ),
-   ),
-		
-  'yiisoft/yii2-redis' =>    /* add by xum [yii-redis plugin] */
-  array (
-	'name' => 'yiisoft/yii2-redis',
-  	'version' => '2.0.0.0',
-	'alias' =>
-	array (
-		 '@yii/redis' => $vendorDir . '/yiisoft/yii2-redis',
-	  ),
+    'name' => 'yiisoft/yii2-jui',
+    'version' => '2.0.0.0',
+    'alias' => 
+    array (
+      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
-		
-  'yiisoft/yii2-apidoc' =>    /* add by xum [yii2-apidoc plugin] */
+  ),
+  'yiisoft/yii2-redis' => 
   array (
-	'name' => 'yiisoft/yii2-apidoc',
-	'version' => '2.0.0.0',
-	'alias' =>
-		array (
-		'@yii/apidoc' => $vendorDir . '/yiisoft/yii2-apidoc',
-		),
-	),
-		
-/*    'yiisoft/yii-debug-toolbar' =>    /* add by xum [yii-debug-toolbar plugin] */
-  /*array (
-	'name' => 'yiisoft/yii2-redis',
-	'version' => '1.7.0.0',
-	'alias' =>
-	array (
-		 '@yii/debugtoobar' => $vendorDir . '/yiisoft/yii-debug-toolbar',
-	  ),
-	), */
-	
+    'name' => 'yiisoft/yii2-redis',
+    'version' => '2.0.0.0',
+    'alias' => 
+    array (
+      '@yii/redis' => $vendorDir . '/yiisoft/yii2-redis',
+    ),
+  ),
+  'yiisoft/yii2-apidoc' => 
+  array (
+    'name' => 'yiisoft/yii2-apidoc',
+    'version' => '2.0.0.0',
+    'alias' => 
+    array (
+      '@yii/apidoc' => $vendorDir . '/yiisoft/yii2-apidoc',
+    ),
+  ),
+  'yiisoft/yii2-swiftmailer' => 
+  array (
+    'name' => 'yiisoft/yii2-swiftmailer',
+    'version' => '2.0.7.0',
+    'alias' => 
+    array (
+      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
+    ),
+  ),
+  'yiisoft/yii2-bootstrap' => 
+  array (
+    'name' => 'yiisoft/yii2-bootstrap',
+    'version' => '2.0.7.0',
+    'alias' => 
+    array (
+      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.0.12.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
+    ),
+  ),
 );
